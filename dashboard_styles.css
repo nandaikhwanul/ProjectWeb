@@ -1,0 +1,261 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Logo */
+.logo-container {
+    flex-grow: 1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #333;
+}
+
+/* Search Bar */
+.search-bar {
+    flex: 3; /* Menambah ruang lebih banyak untuk search bar */
+    display: flex;
+    justify-content: flex-start; /* Pindahkan search bar lebih ke kiri */
+}
+
+.search-bar input {
+    width: 50%; /* Atur panjang dalam persentase */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 18px;
+    font-size: 16px;
+}
+
+/* Profile Picture */
+header .profile img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Navigation */
+nav {
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+}
+
+/* Contact */
+.contact {
+    display: flex;
+    align-items: center;
+}
+
+.contact p {
+    margin: 0 10px 0 0;
+}
+
+.contact img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button.signin {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    padding: 20px;
+}
+
+/* Sidebar */
+aside {
+    width: 250px;
+    margin-right: 20px;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+}
+
+.sidebar .logout {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Overview Section */
+section {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.overview h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Daily Activities */
+.daily-activities {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.applied-jobs h3 {
+    font-size: 30px;
+    margin: 0;
+}
+
+/* Profile Warning */
+.profile-warning {
+    background-color: #ffdddd;
+    padding: 10px;
+    border-left: 5px solid #ff0000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-warning button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Jobs Table */
+.jobs table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.jobs table, .jobs table th, .jobs table td {
+    border: 1px solid #ddd;
+}
+
+.jobs table th, .jobs table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.status-active {
+    color: green;
+    font-weight: bold;
+}
+
+.jobs table button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
