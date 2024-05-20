@@ -21,7 +21,7 @@
         <a href="#" class="navbar-logo">UnramGrad Career Guide</a>
 
         <div class="navbar-nav">
-            <a href="#">Home</a>
+            <a href="#home">Home</a>
             <a href="#findjob">Find Job</a>
             <a href="#employer">Employers</a>
             <a href="#candidate">Candidates</a>
@@ -36,8 +36,20 @@
     </nav>
     <!-- Navbar end -->
 
+    <!-- Hero Section start -->
+    <section class="hero" id="home">
+        <main class="content">
+            <h1>Discover the best career opportunities or find talented employees for your company</h1>
+            <a href="#" class="cta" onclick="window.location.href='signup.html'">Start To Register</a>
+        </main>
+    </section>
+    <!-- Hero Section end -->
+
     <!-- Feather Icons -->
     <script>feather.replace()</script>
+
+    <!-- My Javascript -->
+    <script src="js/script.js"></script>
      
 </body>
 </html>
