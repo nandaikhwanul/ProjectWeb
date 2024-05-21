@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Username belum ada, melanjutkan dengan memeriksa email
         $stmt_check_username->close();
 
-        // Memeriksa apakah email sudah ada di basis data
+        // Memeriksa apakah email sudah ada di basis data 
         $sql_check_email = "SELECT id FROM users WHERE email = ?";
         $stmt_check_email = $conn->prepare($sql_check_email);
         $stmt_check_email->bind_param("s", $email);
