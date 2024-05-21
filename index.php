@@ -31,6 +31,7 @@
             <a href="#" id="search"><i data-feather="search"></i></a>
             <a href="#" id="phone-call"><i data-feather="phone-call"></i></a>
             <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+            <a href="#" class="signin" onclick="window.location.href='signin.html'">Sign In</a>
         </div>
         
     </nav>
