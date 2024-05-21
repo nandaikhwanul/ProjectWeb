@@ -22,9 +22,9 @@
 
         <div class="navbar-nav">
             <a href="#home">Home</a>
-            <a href="#findjob">Find Job</a>
-            <a href="#employer">Employers</a>
-            <a href="#candidate">Candidates</a>
+            <a href="#about">About Us</a>
+            <!-- <a href="#menu">Menu</a> -->
+            <a href="#contact">Contact</a>
         </div>
 
         <div class="navbar-extra">
@@ -45,6 +45,27 @@
         </main>
     </section>
     <!-- Hero Section end -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+
+        <div class="row">
+            <!-- <div class="about-img"> 
+                <img src="" alt="About Us">
+            </div> -->
+            <div class="content">
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse ea quas omnis, recusandae ab nostrum.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, nobis laudantium? Enim ullam ad optio.</p>
+            </div>
+        </div>
+    </section>
+    <!-- About Section start -->
+    
+    <!-- About Section end -->
+
+    <!-- Footer start-->
+    
+    <!-- Footer end-->
 
     <!-- Feather Icons -->
     <script>feather.replace()</script>
