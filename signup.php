@@ -3,7 +3,7 @@ session_start();
 $servername = "localhost";
 $dbusername = "root"; // Ganti ini dengan username basis data Anda
 $dbpassword = ""; // Ganti ini dengan password basis data Anda
-$dbname = "alumni_dashboard";
+$dbname = "unramgradcg";
 
 // Membuat koneksi
 $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
@@ -75,3 +75,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/signup_styles.css" />
+  </head>
+  <body>
+    <main>
+      <form action="signup.php" method="post">
+        <h1>Sign Up</h1>
+        <!-- Memindahkan judul ke dalam form -->
+        <img src="images/logoUnram.png" alt="logoUnram" class="logoUnram" />
+        <!-- Menambahkan logo -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <label for="confirm_password">Confirm Password:</label>
+        <input
+          type="password"
+          id="confirm_password"
+          name="confirm_password"
+          required
+        />
+        <button type="submit">Sign Up</button>
+        <p>Sudah punya akun? <a href="signin.php">Masuk</a></p>
+        <!-- Tambahkan teks dan link untuk Sign Up -->
+      </form>
+    </main>
+  </body>
+</html>
