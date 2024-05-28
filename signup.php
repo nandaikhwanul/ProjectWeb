@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Memeriksa apakah username sudah ada di basis data
-    $sql_check_username = "SELECT id FROM users WHERE username = ?";
+    $sql_check_username = "SELECT id_user FROM user WHERE username = ?";
     $stmt_check_username = $conn->prepare($sql_check_username);
     $stmt_check_username->bind_param("s", $username);
     $stmt_check_username->execute();
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt_check_username->close();
 
         // Memeriksa apakah email sudah ada di basis data 
-        $sql_check_email = "SELECT id FROM users WHERE email = ?";
+        $sql_check_email = "SELECT id_user FROM user WHERE email = ?";
         $stmt_check_email = $conn->prepare($sql_check_email);
         $stmt_check_email->bind_param("s", $email);
         $stmt_check_email->execute();
@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Email belum ada, lanjutkan dengan insert
             $stmt_check_email->close();
 
-            $sql_insert = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+            $sql_insert = "INSERT INTO user (username, email, password) VALUES (?, ?, ?)";
             $stmt_insert = $conn->prepare($sql_insert);
             $stmt_insert->bind_param("sss", $username, $email, $hashed_password);
 
