@@ -20,7 +20,7 @@
   <body>
     <!-- navbar -->
     <nav class="navbar">
-      <h2 class="navbar-logo"><a href="#">UnramGrad Career Guide</a></h2>
+      <a class="navbar-logo" href="#">UnramGrad Career Guide</a>
       <div class="navbar-menu">
         <a href="#jobs">Jobs</a>
         <a href="#companies">Companies</a>
