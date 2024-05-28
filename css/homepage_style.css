@@ -72,6 +72,10 @@ h1 {
   transform: scaleX(1);
 }
 
+/* .bg-image {
+
+} */
+
 .menu-toggle {
   display: block;
 }
@@ -91,7 +95,7 @@ header {
   /* background-image: url("../images/background.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 3;
+  /* background-size: 4; */
   position: relative;
 }
 
@@ -128,7 +132,6 @@ header {
   display: flex;
   justify-content: space-between;
   height: 100%;
-  padding: 5rem;
 }
 
 .search-input {
