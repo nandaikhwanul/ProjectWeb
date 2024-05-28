@@ -110,6 +110,10 @@ header {
   text-shadow: 4px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
+.bg-image {
+  width: 100%;
+}
+
 .search-wrapper {
   width: 60%;
   margin: auto;
