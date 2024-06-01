@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 17, 2024 at 04:46 PM
+-- Generation Time: Jun 01, 2024 at 06:16 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -24,6 +24,34 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id_admin` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `nama` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `artikel`
+--
+
+CREATE TABLE `artikel` (
+  `id_artikel` int(11) NOT NULL,
+  `judul` varchar(255) NOT NULL,
+  `konten` text NOT NULL,
+  `tanggal_post` date NOT NULL,
+  `id_admin` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `cv_portofolio`
 --
 
@@ -32,6 +60,21 @@ CREATE TABLE `cv_portofolio` (
   `id_user` int(11) DEFAULT NULL,
   `file_path` varchar(255) NOT NULL,
   `deskripsi` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lamaran`
+--
+
+CREATE TABLE `lamaran` (
+  `id_lamaran` int(11) NOT NULL,
+  `id_user` int(11) DEFAULT NULL,
+  `id_lowongan` int(11) DEFAULT NULL,
+  `id_perusahaan` int(11) NOT NULL,
+  `status_lamaran` enum('Diterima','Ditolak','Dalam Proses') NOT NULL,
+  `tanggal_melamar` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -47,20 +90,6 @@ CREATE TABLE `lowongan_kerja` (
   `deskripsi` text NOT NULL,
   `tanggal_dibuka` date NOT NULL,
   `tanggal_ditutup` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pelamar`
---
-
-CREATE TABLE `pelamar` (
-  `id_pelamar` int(11) NOT NULL,
-  `id_user` int(11) DEFAULT NULL,
-  `id_lowongan` int(11) DEFAULT NULL,
-  `status_lamaran` enum('Diterima','Ditolak','Dalam Proses') NOT NULL,
-  `tanggal_melamar` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -101,6 +130,19 @@ CREATE TABLE `user` (
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id_admin`);
+
+--
+-- Indexes for table `artikel`
+--
+ALTER TABLE `artikel`
+  ADD PRIMARY KEY (`id_artikel`),
+  ADD KEY `id_admin` (`id_admin`);
+
+--
 -- Indexes for table `cv_portofolio`
 --
 ALTER TABLE `cv_portofolio`
@@ -108,19 +150,20 @@ ALTER TABLE `cv_portofolio`
   ADD KEY `id_user` (`id_user`);
 
 --
+-- Indexes for table `lamaran`
+--
+ALTER TABLE `lamaran`
+  ADD PRIMARY KEY (`id_lamaran`),
+  ADD KEY `id_user` (`id_user`),
+  ADD KEY `id_lowongan` (`id_lowongan`),
+  ADD KEY `id_perusahaan` (`id_perusahaan`);
+
+--
 -- Indexes for table `lowongan_kerja`
 --
 ALTER TABLE `lowongan_kerja`
   ADD PRIMARY KEY (`id_lowongan`),
   ADD KEY `id_perusahaan` (`id_perusahaan`);
-
---
--- Indexes for table `pelamar`
---
-ALTER TABLE `pelamar`
-  ADD PRIMARY KEY (`id_pelamar`),
-  ADD KEY `id_user` (`id_user`),
-  ADD KEY `id_lowongan` (`id_lowongan`);
 
 --
 -- Indexes for table `perusahaan`
@@ -139,22 +182,34 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `artikel`
+--
+ALTER TABLE `artikel`
+  MODIFY `id_artikel` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `cv_portofolio`
 --
 ALTER TABLE `cv_portofolio`
   MODIFY `id_cv` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `lamaran`
+--
+ALTER TABLE `lamaran`
+  MODIFY `id_lamaran` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `lowongan_kerja`
 --
 ALTER TABLE `lowongan_kerja`
   MODIFY `id_lowongan` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `pelamar`
---
-ALTER TABLE `pelamar`
-  MODIFY `id_pelamar` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `perusahaan`
@@ -166,11 +221,17 @@ ALTER TABLE `perusahaan`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `artikel`
+--
+ALTER TABLE `artikel`
+  ADD CONSTRAINT `artikel_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `admin` (`id_admin`);
 
 --
 -- Constraints for table `cv_portofolio`
@@ -179,17 +240,17 @@ ALTER TABLE `cv_portofolio`
   ADD CONSTRAINT `cv_portofolio_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
 
 --
+-- Constraints for table `lamaran`
+--
+ALTER TABLE `lamaran`
+  ADD CONSTRAINT `lamaran_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`),
+  ADD CONSTRAINT `lamaran_ibfk_2` FOREIGN KEY (`id_lowongan`) REFERENCES `lowongan_kerja` (`id_lowongan`);
+
+--
 -- Constraints for table `lowongan_kerja`
 --
 ALTER TABLE `lowongan_kerja`
   ADD CONSTRAINT `lowongan_kerja_ibfk_1` FOREIGN KEY (`id_perusahaan`) REFERENCES `perusahaan` (`id_perusahaan`);
-
---
--- Constraints for table `pelamar`
---
-ALTER TABLE `pelamar`
-  ADD CONSTRAINT `pelamar_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`),
-  ADD CONSTRAINT `pelamar_ibfk_2` FOREIGN KEY (`id_lowongan`) REFERENCES `lowongan_kerja` (`id_lowongan`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
