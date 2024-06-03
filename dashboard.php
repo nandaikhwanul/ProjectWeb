@@ -38,7 +38,7 @@ $username = $_SESSION['username'];
                 <div class="contact">
                     <p>+1-202-555-0178</p>
                     <img src="indo-flag.png" alt="idn Flag">
-                    <button class="signin" onclick="window.location.href='signin.html'">Sign In</button>
+                    <button class="signin" onclick="window.location.href='signin.php'">Sign In</button>
                 </div>
         </header>
         <header>
@@ -62,10 +62,10 @@ $username = $_SESSION['username'];
                     <h2>Candidate Dashboard</h2>
                     <ul>
                         <li><a href="#" class="active">Overview</a></li>
-                        <li><a href="#">Applied Jobs</a></li>
-                        <li><a href="#">Settings</a></li>
+                        <li><a href="appliedJobs.php">Applied Jobs</a></li>
+                        <li><a href="settingCandidate.php">Settings</a></li>
                     </ul>
-                    <a href="#" class="logout">Log Out</a>
+                    <a href="logout.php" class="logout">Log Out</a>
                 </div>
             </aside>
             <section>

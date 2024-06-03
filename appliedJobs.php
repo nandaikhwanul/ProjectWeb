@@ -64,7 +64,7 @@ $username = $_SESSION['username'];
                         <li><a href="appliedJobs.php" class="active">Applied Jobs</a></li>
                         <li><a href="Setting.php">Settings</a></li>
                     </ul>
-                    <a href="home.html" class="logout">Log Out</a>
+                    <a href="homepage.php" class="logout">Log Out</a>
                 </div>
             </aside>
             <section>

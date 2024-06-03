@@ -1,8 +1,8 @@
 <?php
 session_start();
 $servername = "localhost";
-$dbusername = "root"; // Ganti ini dengan username basis data Anda
-$dbpassword = ""; // Ganti ini dengan password basis data Anda
+$dbusername = "root"; 
+$dbpassword = ""; 
 $dbname = "unramgradcg";
 
 // Membuat koneksi

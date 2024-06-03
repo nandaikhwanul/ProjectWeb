@@ -27,7 +27,7 @@ $username = $_SESSION['username'];
             <div class="top-bar">
                 <nav>
                     <ul>
-                        <li><a href="home.html">Home</a></li>
+                        <li><a href="homepage.html">Home</a></li>
                         <li><a href="#">Dashboard</a></li>
                         <li><a href="#">Find Job</a></li>
                         <li><a href="#">Find Employers</a></li>
