@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 01, 2024 at 06:16 PM
+-- Generation Time: Jun 03, 2024 at 06:05 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -38,6 +38,28 @@ CREATE TABLE `admin` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `alumni`
+--
+
+CREATE TABLE `alumni` (
+  `id_alumni` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `profile_picture` blob DEFAULT NULL,
+  `full_name` varchar(100) DEFAULT NULL,
+  `password` varchar(255) NOT NULL,
+  `title_headline` varchar(100) DEFAULT NULL,
+  `experience` text DEFAULT NULL,
+  `education` text DEFAULT NULL,
+  `personal_website` varchar(255) DEFAULT NULL,
+  `map_location` varchar(255) DEFAULT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `location` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `artikel`
 --
 
@@ -57,7 +79,7 @@ CREATE TABLE `artikel` (
 
 CREATE TABLE `cv_portofolio` (
   `id_cv` int(11) NOT NULL,
-  `id_user` int(11) DEFAULT NULL,
+  `id_alumni` int(11) DEFAULT NULL,
   `file_path` varchar(255) NOT NULL,
   `deskripsi` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -70,7 +92,7 @@ CREATE TABLE `cv_portofolio` (
 
 CREATE TABLE `lamaran` (
   `id_lamaran` int(11) NOT NULL,
-  `id_user` int(11) DEFAULT NULL,
+  `id_alumni` int(11) DEFAULT NULL,
   `id_lowongan` int(11) DEFAULT NULL,
   `id_perusahaan` int(11) NOT NULL,
   `status_lamaran` enum('Diterima','Ditolak','Dalam Proses') NOT NULL,
@@ -117,13 +139,15 @@ CREATE TABLE `user` (
   `id_user` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `role` enum('Admin','Perusahaan','Alumni') NOT NULL,
-  `nama` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `alamat` text DEFAULT NULL,
-  `no_telepon` varchar(15) DEFAULT NULL,
-  `foto_profil` varchar(255) DEFAULT NULL
+  `role` enum('Admin','Perusahaan','Alumni') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id_user`, `username`, `password`, `role`) VALUES
+(2, 'gia', '$2y$10$8/mJMk/74VXl6hcvYBoO8emGWJ0bwfwrP1KGwN8R7y0K/ZAXE3opS', 'Admin');
 
 --
 -- Indexes for dumped tables
@@ -134,6 +158,13 @@ CREATE TABLE `user` (
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_admin`);
+
+--
+-- Indexes for table `alumni`
+--
+ALTER TABLE `alumni`
+  ADD PRIMARY KEY (`id_alumni`),
+  ADD KEY `id_user` (`id_user`);
 
 --
 -- Indexes for table `artikel`
@@ -147,16 +178,16 @@ ALTER TABLE `artikel`
 --
 ALTER TABLE `cv_portofolio`
   ADD PRIMARY KEY (`id_cv`),
-  ADD KEY `id_user` (`id_user`);
+  ADD KEY `id_alumni` (`id_alumni`);
 
 --
 -- Indexes for table `lamaran`
 --
 ALTER TABLE `lamaran`
   ADD PRIMARY KEY (`id_lamaran`),
-  ADD KEY `id_user` (`id_user`),
   ADD KEY `id_lowongan` (`id_lowongan`),
-  ADD KEY `id_perusahaan` (`id_perusahaan`);
+  ADD KEY `id_perusahaan` (`id_perusahaan`),
+  ADD KEY `id_alumni` (`id_alumni`);
 
 --
 -- Indexes for table `lowongan_kerja`
@@ -186,6 +217,12 @@ ALTER TABLE `user`
 --
 ALTER TABLE `admin`
   MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `alumni`
+--
+ALTER TABLE `alumni`
+  MODIFY `id_alumni` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `artikel`
@@ -221,7 +258,7 @@ ALTER TABLE `perusahaan`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
@@ -237,13 +274,13 @@ ALTER TABLE `artikel`
 -- Constraints for table `cv_portofolio`
 --
 ALTER TABLE `cv_portofolio`
-  ADD CONSTRAINT `cv_portofolio_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
+  ADD CONSTRAINT `cv_portofolio_ibfk_1` FOREIGN KEY (`id_alumni`) REFERENCES `user` (`id_user`);
 
 --
 -- Constraints for table `lamaran`
 --
 ALTER TABLE `lamaran`
-  ADD CONSTRAINT `lamaran_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`),
+  ADD CONSTRAINT `lamaran_ibfk_1` FOREIGN KEY (`id_alumni`) REFERENCES `user` (`id_user`),
   ADD CONSTRAINT `lamaran_ibfk_2` FOREIGN KEY (`id_lowongan`) REFERENCES `lowongan_kerja` (`id_lowongan`);
 
 --
