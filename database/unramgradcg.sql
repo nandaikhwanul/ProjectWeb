@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 03, 2024 at 06:05 PM
+-- Generation Time: Jun 03, 2024 at 06:16 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -138,6 +138,7 @@ CREATE TABLE `perusahaan` (
 CREATE TABLE `user` (
   `id_user` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `role` enum('Admin','Perusahaan','Alumni') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -146,8 +147,9 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `username`, `password`, `role`) VALUES
-(2, 'gia', '$2y$10$8/mJMk/74VXl6hcvYBoO8emGWJ0bwfwrP1KGwN8R7y0K/ZAXE3opS', 'Admin');
+INSERT INTO `user` (`id_user`, `username`, `email`, `password`, `role`) VALUES
+(2, 'gia', 'as@gmail.com', '$2y$10$8/mJMk/74VXl6hcvYBoO8emGWJ0bwfwrP1KGwN8R7y0K/ZAXE3opS', 'Admin'),
+(3, 'marriott', 'marriott@gmail.com', '$2y$10$A.cJxvZco.ORQvQJOTlWi.AxCPuPhnenz5Qgy1HpKFWrMjaDwUxMa', 'Perusahaan');
 
 --
 -- Indexes for dumped tables
@@ -258,7 +260,7 @@ ALTER TABLE `perusahaan`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
