@@ -37,7 +37,7 @@
     </nav>
     <!-- header -->
     <header>
-      <img class="bg-image" src="images/background.jpg">
+      <img class="bg-image" src="images/background.jpg"> 
       <h1 class="header-title">
         Discover the best career opportunities <br />
         <span> or find talented employees </span> <br />
