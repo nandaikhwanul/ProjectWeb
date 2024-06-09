@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/halaman_alumni_style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- swiper -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> -->
+
+    <title>UnramGrad Career Guide</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <a class="navbar-logo" href="#">UnramGrad Career Guide</a>
+      <div class="navbar-menu">
+        <a href="#jobs">Jobs</a>
+        <a href="#companies">Companies</a>
+        <a href="#blog">Blogs</a>
+        <a href="#" class="dashboard" onclick="window.location.href='overviewCandidate.php'">Dashboard</a>
+      </div>
+      <div class="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </nav>
+    <!-- header -->
+    <header>
+      <img src="images/background.jpg" class="img-fluid" alt="...">
+      <!-- <img class="bg-image" src="images/background.jpg"> -->
+    </header>
+
+    <!-- job listing -->
+    <section class="job-list" id="jobs">
+      <div class="job-card">
+        <div class="job-name">
+          <img class="job-profile" src="images/bri logo.jpeg">
+          <div class="job-detail">
+            <h4>BRI</h4>
+            <h3>UI/UX Designer</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="job-label">
+          <a class="label-a" href="#">HTML</a>
+          <a class="label-b" href="#">CSS</a>
+          <a class="label-c" href="#">Javascript</a>
+        </div>
+        <div class="job-posted">
+          Posted 2 mins ago
+        </div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-name">
+          <img class="job-profile" src="images/amazon.jpeg">
+          <div class="job-detail">
+            <h4>Amazon</h4>
+            <h3>Business Development</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="job-label">
+          <a class="label-a" href="#">HTML</a>
+          <a class="label-b" href="#">CSS</a>
+          <a class="label-c" href="#">Javascript</a>
+        </div>
+        <div class="job-posted">
+          Posted 2 mins ago
+        </div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-name">
+          <img class="job-profile" src="images/marriott.jpeg">
+          <div class="job-detail">
+            <h4>Marriott</h4>
+            <h3>Digital Marketing</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="job-label">
+          <a class="label-a" href="#">HTML</a>
+          <a class="label-b" href="#">CSS</a>
+          <a class="label-c" href="#">Javascript</a>
+        </div>
+        <div class="job-posted">
+          Posted 2 mins ago
+        </div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-name">
+          <img class="job-profile" src="images/neuron.jpeg">
+          <div class="job-detail">
+            <h4>Neurone</h4>
+            <h3>Networking Engineer</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="job-label">
+          <a class="label-a" href="#">HTML</a>
+          <a class="label-b" href="#">CSS</a>
+          <a class="label-c" href="#">Javascript</a>
+        </div>
+        <div class="job-posted">
+          Posted an hour ago
+        </div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-name">
+          <img class="job-profile" src="images/hyundai logo.jpeg">
+          <div class="job-detail">
+            <h4>Hyundai</h4>
+            <h3>Mechanical Engineer</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="job-label">
+          <a class="label-a" href="#">HTML</a>
+          <a class="label-b" href="#">CSS</a>
+          <a class="label-c" href="#">Javascript</a>
+        </div>
+        <div class="job-posted">
+          Posted an hour ago
+        </div>
+      </div>
+
+      <button class="job-more">More List</button>
+    </section>
+
+    <section class="join">
+      <div class="join-detail">
+        <h1 class="section-title">LET'S START YOUR NEW JOB WITH US</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat officia natus assumenda beatae.</p>
+      </div>
+      <button class="join-button" href="#" onclick="window.location.href='signup.php'">Register Now</button>
+    </section>\
+
+    <!-- featured company -->
+    <section class="featured" id="companies">
+      <h1 class="section-title">Featured Companies</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, inventore.</p>
+      <div class="featured-wrapper">
+        <div class="featured-card">
+          <img class="featured-image" src="images/bri logo.jpeg">
+          <p>BRI</p>
+          <button class="featured-button">View 2 jobs</button>
+        </div>
+        <div class="featured-card">
+          <img class="featured-image" src="images/amazon.jpeg">
+          <p>Amazon</p>
+          <button class="featured-button">View 2 jobs</button>
+        </div>
+        <div class="featured-card">
+          <img class="featured-image" src="images/marriott.jpeg"">
+          <p>Marriott</p>
+          <button class="featured-button">View 1 jobs</button>
+        </div>
+        <div class="featured-card">
+          <img class="featured-image" src="images/neuron.jpeg"">
+          <p>Neurone</p>
+          <button class="featured-button">View 2 jobs</button>
+        </div>
+        <div class="featured-card">
+          <img class="featured-image" src="images/hyundai logo.jpeg"">
+          <p>Hyundai</p>
+          <button class="featured-button">View 3 jobs</button>
+        </div>
+        <div class="featured-card">
+          <img class="featured-image" src="images/abnr law logo.jpeg"">
+          <p>ABNR</p>
+          <button class="featured-button">View 4 jobs</button>
+        </div>
+        <div class="featured-card">
+          <img class="featured-image" src="images/technip.jpeg"">
+          <p>Technip</p>
+          <button class="featured-button">View 1 jobs</button>
+        </div>
+        <div class="featured-card">
+          <img class="featured-image" src="images/rekind.jpeg"">
+          <p>Rekind</p>
+          <button class="featured-button">View 4 jobs</button>
+        </div>
+        <div class="featured-card">
+          <img class="featured-image" src="images/APPLE.jpeg"">
+          <p>Apple</p>
+          <button class="featured-button">View 3 jobs</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- testimoni -->
+    <!--  
+    <section class="testimoni" id="testimoni">
+      <h1 class="section-title">Testimonial</h1>
+      <p>Let's see what our clients say about us</p>
+    </section> -->
+
+    <!-- blog -->
+    <section class="blog" id="blog">
+      <h1 class="section-title">Career Advices</h1>
+      <p>Learn more career tips from company's recruiter</p>
+      <div class="blog-wrapper">
+        <div class="blog-card">
+          <img class="blog-image" src="images/blog-1.jpg">
+          <div class="blog-detail">
+            <span>11 Apr 2024</span>
+            <h4>How to enjoy your work</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            <hr class="divider">
+            <a href="#" class="blog-more">Read more</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img class="blog-image" src="images/blog-2.jpg">
+          <div class="blog-detail">
+            <span>24 Apr 2024</span>
+            <h4>10 Tips for technical interview</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            <hr class="divider">
+            <a href="#" class="blog-more">Read more</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img class="blog-image" src="images/blog-3.jpg">
+          <div class="blog-detail">
+            <span>11 May 2024</span>
+            <h4>Managing Time Effectively</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            <hr class="divider">
+            <a href="#" class="blog-more">Read more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-wrapper">
+        <h3>UnramGrad Career Guide</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nesciunt illo consectetur accusamus officia.</p>
+        <div class="social-media">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-wrapper">
+        <h4>Explore</h4>
+        <a href="#">Top Companies</a>
+        <a href="#">Terms of Services</a>
+        <a href="#">Careers</a>
+      </div>
+      <div class="footer-wrapper">
+        <h4>About</h4>
+        <a href="#">FAQ</a>
+        <a href="#">Get Inspired</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="footer-wrapper">
+        <h4>Support</h4>
+        <a href="#">Customer Service</a>
+        <a href="#">Trust & Safety</a>
+        <a href="#">Partnership</a>
+      </div>
+      <div class="footer-wrapper">
+        <h4>Community</h4>
+        <a href="#">Community</a>
+        <a href="#">Invite a Friend</a>
+        <a href="#">Event</a>
+      </div>
+    </footer>
+  </body>
+</html>

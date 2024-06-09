@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar Example with Navbar and Table</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        margin: 0;
+      }
+      .navbar {
+        width: 100%;
+      }
+      .container-fluid {
+        display: flex;
+        flex: 1;
+        padding: 0;
+      }
+      .sidebar {
+        width: 250px;
+        height: calc(100vh - 56px);
+        background-color: #343a40;
+        color: white;
+        display: flex;
+        flex-direction: column;
+      }
+      .sidebar a {
+        color: white;
+        text-decoration: none;
+        padding: 15px;
+      }
+      .sidebar a:hover {
+        background-color: #495057;
+      }
+      .content {
+        flex-grow: 1;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Homepage</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h2 class="text-center my-4">Menu</h2>
+        <a href="#" onclick="showContent('overview')">Overview</a>
+        <a href="#" onclick="showContent('applied-jobs')">Applied Jobs</a>
+        <a href="#" onclick="showContent('settings')">Setting</a>
+        <a href="logout.php">Logout</a>
+      </div>
+      <!-- Main Content -->
+      <div class="content" id="content">
+        <!-- Default Content -->
+        <h1>Welcome</h1>
+        <p>Select an option from the sidebar.</p>
+      </div>
+    </div>
+
+    <script>
+      function showContent(contentId) {
+        var content = document.getElementById("content");
+        if (contentId === "overview") {
+          content.innerHTML = `
+                    <h1>Overview</h1>
+                    <p>This is the overview page.</p>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Position</th>
+                                <th scope="col">Office</th>
+                                <th scope="col">Age</th>
+                                <th scope="col">Start date</th>
+                                <th scope="col">Salary</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>John Doe</td>
+                                <td>System Architect</td>
+                                <td>New York</td>
+                                <td>41</td>
+                                <td>2011/04/25</td>
+                                <td>$320,800</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jane Smith</td>
+                                <td>Software Engineer</td>
+                                <td>London</td>
+                                <td>29</td>
+                                <td>2012/12/02</td>
+                                <td>$170,750</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Paul Walker</td>
+                                <td>QA Engineer</td>
+                                <td>Tokyo</td>
+                                <td>35</td>
+                                <td>2013/03/15</td>
+                                <td>$125,300</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                `;
+        } else if (contentId === "applied-jobs") {
+          content.innerHTML =
+            "<h1>Applied Jobs</h1><p>This is the applied jobs page.</p>";
+        } else if (contentId === "settings") {
+          content.innerHTML =
+            "<h1>Settings</h1><p>This is the settings page.</p>";
+        }
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
