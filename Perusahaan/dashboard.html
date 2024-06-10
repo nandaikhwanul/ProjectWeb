@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employers Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Find Job</a></li>
+                    <li><a href="#">Find Employers</a></li>
+                    <li><a href="#">Candidates</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <span>+1-202-555-0178</span>
+                <button>Post A Job</button>
+                <img src="assets/images/logo.png" alt="User Logo">
+            </div>
+        </div>
+    </header>
+    <div class="sidebar">
+        <h2>Employers Dashboard</h2>
+        <ul>
+            <li class="active">Overview</li>
+            <li>Employers Profile</li>
+            <li>Post A Job</li>
+            <li>My Job</li>
+            <li>Candidates</li>
+            <li>Settings</li>
+            <li>Log Out</li>
+        </ul>
+    </div>
+    <main>
+        <section class="dashboard">
+            <h1>Hello, Apple</h1>
+            <p>Here’s Your Daily Activities</p>
+            <div class="statistics">
+                <div class="stat">
+                    <span class="number">6</span>
+                    <span class="label">Open Jobs</span>
+                </div>
+                <div class="stat">
+                    <span class="number">200</span>
+                    <span class="label">Candidates</span>
+                </div>
+            </div>
+            <div class="job-listings">
+                <h2>Recently Posted Jobs</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Jobs</th>
+                            <th>Status</th>
+                            <th>Applications</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>UI/UX Designer<br><span>Full Time • 27 days remaining</span></td>
+                            <td class="status active">Active</td>
+                            <td>130 Applications</td>
+                            <td><button>View Applications</button></td>
+                        </tr>
+                        <tr>
+                            <td>Senior UI/UX Designer<br><span>Internship • 27 days remaining</span></td>
+                            <td class="status active">Active</td>
+                            <td>85 Applications</td>
+                            <td><button>View Applications</button></td>
+                        </tr>
+                        <tr>
+                            <td>Technical Support Specialist<br><span>Full Time • 27 days remaining</span></td>
+                            <td class="status active">Active</td>
+                            <td>176 Applications</td>
+                            <td><button>View Applications</button></td>
+                        </tr>
+                        <tr>
+                            <td>Junior Graphic Designer<br><span>Full Time • 27 days remaining</span></td>
+                            <td class="status active">Active</td>
+                            <td>231 Applications</td>
+                            <td><button>View Applications</button></td>
+                        </tr>
+                        <tr>
+                            <td>Software Engineer<br><span>Remote • May 20, 2024</span></td>
+                            <td class="status active">Active</td>
+                            <td>311 Applications</td>
+                            <td><button>View Applications</button></td>
+                        </tr>
+                        <tr>
+                            <td>Networking Engineer<br><span>Remote • Oct 31, 2023</span></td>
+                            <td class="status expired">Expired</td>
+                            <td>213 Applications</td>
+                            <td><button>View Applications</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

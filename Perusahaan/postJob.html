@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="employers.css">
+
+	<title>UnramGrad Career Guide</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bx-briefcase-alt'></i>
+			<span class="text">UnramGrad Career Guide</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="">
+				<a href="overview.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Overview</span>
+				</a>
+			</li>
+			<li class="">
+				<a href="employersProfile.html">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Employers Profile</span>
+				</a>
+			</li>
+			<li class="active">
+				<a href="postJob.html">
+					<i class='bx bx-user' ></i>
+					<span class="text">Post A Job</span>
+				</a>
+			</li>
+			<li>
+				<a href="myjob.html">
+					<i class='bx bx-user' ></i>
+					<span class="text">My Job</span>
+				</a>
+			</li>
+			<li>
+				<a href="candidate.html">
+					<i class='bx bx-user' ></i>
+					<span class="text">Candidate</span>
+				</a>
+			</li>
+			<li>
+				<a href="profile.html">
+					<i class='bx bx-user' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+            <ul class="side-menu">
+                <li>
+                    <a href="#" class="logout">
+                        <i class='bx bxs-log-out-circle' ></i>
+                        <span class="text">Logout</span>
+                    </a>
+                </li>
+            </ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="img/people.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="post-job">
+				<h2 style="margin-bottom: 15px;">Post A Job</h2>
+				<form action="#">
+					<div class="input-group" style="margin-bottom: 20px;">
+                        <label for="job-title" style="font-weight: 600; font-size: 16px; display: block; margin-bottom: -10px;">Job Title</label><br>
+                        <input type="text" id="job-title" placeholder="Select..." style="padding: 1%; border-radius: 7px; width: 80%; border: 1px solid #d9d9d9;">
+                    </div>
+                    
+					<div class="input-group">
+                        <div style="display: flex; font-weight: 600; font-size: 16px; margin-bottom: 15px;">
+                            <span style="flex: 1; margin-right: 10px;">
+                                <label for="tags" style="margin-bottom: -10px; display: block;">Tags</label><br>
+                                <input type="text" id="tags" placeholder="Select..." style="padding: 2%; border-radius: 7px; width: 100%; border: 1px solid #d9d9d9;">
+                            </span>
+                            <span style="flex: 1;">
+                                <label for="job-role" style="margin-bottom: -10px; display: block;">Job Role</label><br>
+                                <input type="text" id="job-role" placeholder="Select..." style="padding: 2%; border-radius: 7px; width: 100%; border: 1px solid #d9d9d9;">
+                            </span>
+                        </div>
+                        
+                        
+					</class=>
+                    <h2 style="margin-bottom: 15px;" 15px;>Salary</h2>
+                    <div style="display: flex; font-weight: 600; font-size: 16px; margin-bottom: 15px;">
+                        <div class="input-group" style="margin-right: 10px; flex: 1;">
+                            <label for="min-salary" style="margin-bottom: -10px;display: block;">Min Salary</label><br>
+                            <input type="number" id="min-salary" placeholder="Select..." style="padding: 3%; border-radius: 7px; width: 100%; border: 1px solid #d9d9d9;">
+                        </div>
+                        <div class="input-group" style="margin-right: 10px; flex: 1;">
+                            <label for="max-salary" style="margin-bottom: -10px; display: block;">Max Salary</label><br>
+                            <input type="number" id="max-salary" placeholder="Select..." style="padding: 3%; border-radius: 7px; width: 100%; border: 1px solid #d9d9d9;">
+                        </div>
+                        <div class="input-group" style="flex: 1;">
+                            <label for="salary-type" style="margin-bottom: -10px; display: block;">Salary Type</label><br>
+                            <input type="text" id="salary-type" placeholder="Select..." style="padding: 3%; border-radius: 7px; width: 100%; border: 1px solid #d9d9d9;">
+                        </div>
+                    </div>
+                    </div>
+
+                    <h2 style="margin-bottom: 15px;">Advance Information</h2>
+                    <div style="display: flex; font-weight: 600; font-size: 16px;">
+                        <div class="input-group" style="margin-right: 10px; flex: 1;">
+                            <label for="education" style="margin-bottom: -10px; display: block;">Education</label>
+                            <br>
+                            <input type="text" id="education" placeholder="Select..." style="padding: 4%; border-radius: 7px; width: 100%; border: 1px solid #d9d9d9;">
+                        </div>
+                        <div class="input-group" style="margin-right: 10px; flex: 1;">
+                            <label for="experience" style="margin-bottom: -10px; display: block;">Experience</label>
+                            <br>
+                            <input type="text" id="experience" placeholder="Select..." style="padding: 4%; border-radius: 7px; width: 100%; border: 1px solid #d9d9d9;">
+                        </div>
+                        <div class="input-group" style="margin-right: 10px; flex: 1;">
+                            <label for="job-type" style="margin-bottom: -10px; display: block;">Job Type</label>
+                            <br>
+                            <input type="text" id="job-type" placeholder="Select..." style="padding: 4%; border-radius: 7px; width: 100%; border: 1px solid #d9d9d9;">
+                        </div>
+                        <div class="input-group" style="flex: 1;">
+                            <label for="expiration-date" style="margin-bottom: -10px; display: block;">Expiration Date</label>
+                            <br>
+                            <input type="text" id="expiration-date" placeholder="DD/MM/YY" style="padding: 4%; border-radius: 7px; width: 100%; border: 1px solid #d9d9d9;">
+                        </div>
+                    </div>
+                    
+                    
+                    <h2 style="margin-bottom: 15px;">Location</h2>
+                    <div style="display: flex; font-weight: 600; font-size: 16px;">
+                        <div class="input-group" style="margin-right: 10px; flex: 1;">
+                            <label for="country" style="margin-bottom: -10px; display: block;">Country</label><br>
+                            <input type="text" id="country" placeholder="Select..." style="padding: 3%; border-radius: 7px; width: 100%; border: 1px solid #d9d9d9;">
+                        </div>
+                        <div class="input-group" style="flex: 1;">
+                            <label for="city" style="margin-bottom: -10px; display: block;">City</label><br>
+                            <input type="text" id="city" placeholder="Select..." style="padding: 3%; border-radius: 7px; width: 100%; border: 1px solid #d9d9d9;">
+                        </div>
+                    </div>
+                    <h2 style="margin-bottom: 15px;">Job Description</h2>
+                    <div style="height: 200px; position: relative; font-weight: 600; font-size: 16px;">
+                        <div class="input-group" style="height: calc(100% - 40px); margin-bottom: 10px;">
+                            <label for="job-description" style="display: block; margin-bottom: -10px;">Job Description</label>
+                            <br>
+                            <textarea id="job-description" placeholder="Add your job description..." style="width: 100%; height: 100%; padding: 10px;"></textarea>
+                        </div>
+                       
+                    </div>
+                    <button type="submit" style="padding: 10px 20px; font-size: 18px; border: none; font-weight: 400; border-radius: 7px; color: white; background-color: #0A65CC; margin-top: 20px;">Post Job</button>
+                    
+                    
+                 </div>
+                            
+				</form>
+			</div>
+		</main>
+		<!-- MAIN -->
+
+	<script src="script.js"></script>
+</body>
+</html>
