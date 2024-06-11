@@ -7,12 +7,11 @@
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
-	<link rel="stylesheet" href="employers.css">
+	<link rel="stylesheet" href="account.css">
 
 	<title>UnramGrad Career Guide</title>
 </head>
 <body>
-
 
 	<!-- SIDEBAR -->
 	<section id="sidebar">
@@ -22,37 +21,37 @@
 		</a>
 		<ul class="side-menu top">
 			<li class="">
-				<a href="overview.html">
+				<a href="/../Perusahaan/overview.html">
 					<i class='bx bxs-dashboard' ></i>
 					<span class="text">Overview</span>
 				</a>
 			</li>
-			<li class="active">
-				<a href="employersProfile.html">
+			<li>
+				<a href="/../Perusahaan/employersProfile.html">
 					<i class='bx bxs-shopping-bag-alt' ></i>
 					<span class="text">Employers Profile</span>
 				</a>
 			</li>
 			<li>
-				<a href="postJob.html">
+				<a href="/../Perusahaan/postJob.html">
 					<i class='bx bx-user' ></i>
 					<span class="text">Post A Job</span>
 				</a>
 			</li>
 			<li>
-				<a href="myjob.html">
+				<a href="/../Perusahaan/myjob.html">
 					<i class='bx bx-user' ></i>
 					<span class="text">My Job</span>
 				</a>
 			</li>
 			<li>
-				<a href="candidadate.html">
+				<a href="/../Perusahaan/candidate.html">
 					<i class='bx bx-user' ></i>
 					<span class="text">Candidate</span>
 				</a>
 			</li>
-			<li>
-				<a href="/Perusahaan/settings/settings.html">
+			<li class="active">
+				<a href="settings.html">
 					<i class='bx bx-user' ></i>
 					<span class="text">Settings</span>
 				</a>
@@ -65,10 +64,9 @@
                     </a>
                 </li>
             </ul>
+		</ul>
 	</section>
 	<!-- SIDEBAR -->
-
-
 
 	<!-- CONTENT -->
 	<section id="content">
@@ -94,7 +92,46 @@
 		</nav>
 		<!-- NAVBAR -->
 
-		
+		<!-- SETTINGS -->
+		<section class="settings">
+			<h2>Setting</h2>
+			<div class="tabs">
+				<a href="/Perusahaan/settings/settings.html">Company Info</a>
+				<a href="/Perusahaan/settings/founding.html">Founding Info</a>
+				<a href="/Perusahaan//settings/socialmedia.html" >Social Media Profile</a>
+				<a href="/Perusahaan/settings/account.html" class="active">Account Setting</a>
+			</div>
+			<div class="tab-content">
+				<div id="founding-info" class="tab-pane active">
+                    <h3 style="margin-bottom: 20px;">Founding Info</h3>
+                    <div style=" gap: 20px;">
+
+                    <div style="display: flex; gap: 21px; margin-bottom: 35px;">
+						<div class="garis" style="width: 751px; height: 49px;">
+							<label for="year-est">Social Link 1</label>
+                            <span></span>
+							<input type="text" id="year-est">
+						</div>
+				</div>
+                    <div style="display: flex; gap: 21px; margin-bottom: 35px;">
+						<div class="garis" style="width: 751px; height: 49px;">
+							<label for="year-est">Social Link 2</label>
+                            <span></span>
+							<input type="text" id="year-est">
+						</div>
+				</div>
+                    <div style="display: flex; gap: 21px; margin-bottom: 35px;">
+						<div class="garis" style="width: 751px; height: 49px;">
+							<label for="year-est">Social Link 3</label>
+                            <span></span>
+							<input type="text" id="year-est" >
+						</div>
+				</div>
+                    <button style="width: 153px; height: 45px; background-color: #0A65CC; border: none; border-radius: 5px; color: white;">Save Changes</button>
+				<!-- Add content for other tabs as necessary -->
+			</div>
+		</section>
+		<!-- SETTINGS -->
 
 	<script src="script.js"></script>
 </body>
